@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<?php
+			if (isset ($_GET["num"])) {
+				$num = $_GET["num"];
+				echo "Your number: $num <br />";
+				echo "Even numbers starting from 2: ";
+				if ($num >= 2) {
+					for ($i = 1; $i <= $num; $i++) {
+						if ($i % 2 == 0) {
+							echo $i . " ";
+						}
+					}
+				}
+			}
+		?>
+
+		<br />
+
+		<form action="GetEvenNumbers.php" method="GET">
+			Type a number: <input type="number" name="num">
+			<input type="submit">
+		</form>
+		
+	</body>
+</html>
